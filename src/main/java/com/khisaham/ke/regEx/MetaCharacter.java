@@ -21,6 +21,53 @@ private static String pattern;
     }
     // returns true if the string have a defined xter at the beginning
     public boolean characterIsAtTheBeginning(String inputText, String character){
-        return inputText.matches("^[^\\"+character+"].*");
+        return inputText.matches("^[^"+character+"].*");
+    }
+
+    // returns true if the string contains a arbitrary number of characters except b
+    public boolean isIntersection(String s){
+        return s.matches("([\\w&&[^b]])*");
+    }
+    // returns true if the string contains a number less than 300
+    public boolean isLessThenThreeHundred(String s){
+        return s.matches("[^0-9]*[12]?[0-9]{1,2}[^0-9]*");
+    }
+    // returns true if the string matches exactly "true"
+    public boolean isTrue(String s){
+        return s.matches("true");
+    }
+    // returns true if the string matches exactly "true" or "True"
+    public boolean isTrueVersion2(String s){
+        return s.matches("[tT]rue");
+    }
+
+    // returns true if the string matches exactly "true" or "True"
+    // or "yes" or "Yes"
+    public boolean isTrueOrYes(String s){
+        return s.matches("[tT]rue|[yY]es");
+    }
+
+    // returns true if the string contains exactly "true"
+    public boolean containsTrue(String s){
+        return s.matches(".*true.*");
+    }
+
+
+    // returns true if the string contains of three letters
+    public boolean isThreeLetters(String s){
+        return s.matches("[a-zA-Z]{3}");
+        // simpler from for
+//      return s.matches("[a-Z][a-Z][a-Z]");
+    }
+
+    // returns true if the string matches exactly parsed patternSequence e.g <p>, <img>, <li> etc
+    public boolean isTrueForAPatternSequence(String inputText, String [] patternSequence){
+    int j;
+        boolean finalBoolean = false;
+        for(j=0; j<=patternSequence.length; j++){
+
+       finalBoolean = inputText.matches(patternSequence[j]);
+        }
+        return  finalBoolean;
     }
 }
