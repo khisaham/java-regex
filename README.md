@@ -1,10 +1,12 @@
 # java-regex
 The Java Regex or Regular Expression is an API to define a pattern for searching or manipulating strings.
 
-##Team
+# Team
+
 khisa Hamphrey (khisaham@gmail.com)
 
-##RegEx (Regular Expressions)
+# RegEx (Regular Expressions)
+
 A regular expression defines a search pattern for strings. The abbreviation for regular expression is regex. The search pattern can be anything from a simple character, a fixed string or a complex expression containing special characters describing the pattern. The pattern defined by the regex may match one or several times or not at all for a given string.
 
 Regular expressions can be used to search, edit and manipulate text.
