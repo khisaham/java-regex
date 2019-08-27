@@ -15,4 +15,12 @@ private static String pattern;
 
         return updated;
     }
+    // returns true if the string does not have a number at the beginning
+    public boolean isNoNumberAtBeginning(String inputText){
+        return inputText.matches("^[^\\d].*");
+    }
+    // returns true if the string have a defined xter at the beginning
+    public boolean characterIsAtTheBeginning(String inputText, String character){
+        return inputText.matches("^[^\\"+character+"].*");
+    }
 }
