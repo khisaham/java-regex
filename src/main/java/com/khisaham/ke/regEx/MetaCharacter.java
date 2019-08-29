@@ -8,11 +8,14 @@ private static String pattern;
         return inputText.replaceAll(pattern, "$1$3");
     }
 
-    public static String extractTextBetweenAnElement(String inputText, String element){
+    public static String extractTextBetweenAnElement(String inputText, String [] element){
         // Extract the text between the two title elements
-        pattern = "(?i)(<"+element+".*?>)(.+?)()";
-        String updated = inputText.replaceAll(pattern, "$2");
+        String updated = "";
+        for(int i=0; i<element.length; i++){
+            pattern = "(?i)(<"+element[i]+".*?>)(.+?)()";
+            updated = inputText.replaceAll(pattern, "$2");
 
+        }
         return updated;
     }
     // returns true if the string does not have a number at the beginning
@@ -61,10 +64,10 @@ private static String pattern;
     }
 
     // returns true if the string matches exactly parsed patternSequence e.g <p>, <img>, <li> etc
-    public boolean isTrueForAPatternSequence(String inputText, String [] patternSequence){
+    public static boolean isTrueForAPatternSequence(String inputText, String[] patternSequence){
     int j;
         boolean finalBoolean = false;
-        for(j=0; j<=patternSequence.length; j++){
+        for(j=0; j<patternSequence.length; j++){
 
        finalBoolean = inputText.matches(patternSequence[j]);
         }
