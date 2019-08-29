@@ -7,6 +7,16 @@
     <groupId>com.khisaham.ke</groupId>
     <artifactId>regex</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <properties>
+        <slf4jVersion>1.6.1</slf4jVersion>
+    </properties>
+    <dependencies>
 
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4jVersion}</version>
+        </dependency>
+    </dependencies>
 
 </project>

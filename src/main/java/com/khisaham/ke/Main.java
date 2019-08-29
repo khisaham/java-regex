@@ -2,8 +2,11 @@ package com.khisaham.ke;
 
 
 import com.khisaham.ke.regEx.MetaCharacter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Main {
+    private static Logger logger = LoggerFactory.getLogger(Main.class);
     public static final String EXAMPLE_TEST = "<p>Hello This is a sample TEXT with <br> <a href='regex.io'>Regex Library</a> and <b>Bold text</b>";
     private static String[] samplePattern = {"<p>","</p>","<a>", "</a>", "<b>", "</b>", "<img>"};
     public static void main(String[] args) {
@@ -15,7 +18,8 @@ public class Main {
 //        }
 //        //replace all whitespace with tabs
 //        System.out.println(EXAMPLE_TEST.replaceAll("\\s+", "\t"));
-        MetaCharacter.extractTextBetweenAnElement(EXAMPLE_TEST, samplePattern);
-        MetaCharacter.isTrueForAPatternSequence(EXAMPLE_TEST, samplePattern);
+       logger.info(MetaCharacter.extractTextBetweenAnElement(EXAMPLE_TEST, samplePattern));
+        logger.info(MetaCharacter.isTrueForAPatternSequence(EXAMPLE_TEST, samplePattern) ? "true" : "false");
+
     }
 }
