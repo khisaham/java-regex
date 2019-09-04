@@ -1,6 +1,7 @@
 package com.khisaham.ke;
 
 
+import com.khisaham.ke.regEx.GenerateRandomAlphaNumeric;
 import com.khisaham.ke.regEx.MetaCharacter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,8 +19,8 @@ public class Main {
 //        }
 //        //replace all whitespace with tabs
 //        System.out.println(EXAMPLE_TEST.replaceAll("\\s+", "\t"));
-       logger.info(MetaCharacter.extractTextBetweenAnElement(EXAMPLE_TEST, samplePattern));
-        logger.info(MetaCharacter.isTrueForAPatternSequence(EXAMPLE_TEST, samplePattern) ? "true" : "false");
-
+//       logger.info(MetaCharacter.extractTextBetweenAnElement(EXAMPLE_TEST, samplePattern));
+//        logger.info(MetaCharacter.isTrueForAPatternSequence(EXAMPLE_TEST, samplePattern) ? "true" : "false");
+        System.out.println(GenerateRandomAlphaNumeric.generateUniqueOrderCode());
     }
 }
